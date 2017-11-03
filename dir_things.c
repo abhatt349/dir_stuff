@@ -10,7 +10,7 @@ int dir_size() {
 	DIR *p;
 	struct dirent *d;
   int size;
-  p = opendir("./");
+  p = opendir("./");   // I just used the current directory for testing purposes
 	while ((d = readdir(p)) != NULL) {
 		stat(d->d_name, &a);
 		size += a.st_size;
